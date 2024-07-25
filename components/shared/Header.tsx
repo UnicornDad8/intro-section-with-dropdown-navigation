@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import NavItems from "./NavItems";
 
 const Header = () => {
   return (
@@ -14,11 +15,7 @@ const Header = () => {
           />
         </Link>
         <nav className="md:flex-between hidden w-full max-w-xs">
-          <ul>
-            <li>uno</li>
-            <li>dos</li>
-            <li>tres</li>
-          </ul>
+          <NavItems />
         </nav>
       </div>
     </header>
