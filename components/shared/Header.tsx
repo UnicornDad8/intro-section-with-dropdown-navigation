@@ -19,9 +19,9 @@ const Header = () => {
         <div className="flex justify-end gap-3">
           <nav className="hidden md:flex">
             <ul className="flex flex-center gap-12">
-              <li>Login</li>
-              <li>
-                <Button className="text-black h-[36px] px-6 bg-transparent outline outline-offset-2 outline-2 outline-black">
+              <li className="cursor-pointer">Login</li>
+              <li className="cursor-pointer">
+                <Button className="text-black h-[36px] px-6 bg-transparent outline outline-offset-2 outline-2 outline-black hover:bg-transparent">
                   Register
                 </Button>
               </li>

@@ -14,7 +14,7 @@ const NavItems = () => {
   const [open2, setOpen2] = useState(false);
 
   return (
-    <ul className="flex flex-col gap-12 items-start md:flex-row">
+    <ul className="flex flex-col gap-12 md:flex-between md:flex-row">
       <li className="hover:cursor-pointer">
         <DropdownMenu open={open1} onOpenChange={setOpen1}>
           <DropdownMenuTrigger
