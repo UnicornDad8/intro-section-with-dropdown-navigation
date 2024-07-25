@@ -18,7 +18,11 @@ const NavItems = () => {
       <li className="hover:cursor-pointer">
         <DropdownMenu open={open1} onOpenChange={setOpen1}>
           <DropdownMenuTrigger
-            className="flex items-center outline-none"
+            className={
+              open1
+                ? "flex items-center text-gray-800 hover:text-gray-800 font-medium outline-none"
+                : "flex items-center text-gray-500 hover:text-gray-800 font-medium outline-none"
+            }
             onClick={() => setOpen1(true)}
           >
             Features
@@ -35,7 +39,7 @@ const NavItems = () => {
             />
           </DropdownMenuTrigger>
           <DropdownMenuContent className="border-none rounded-lg">
-            <DropdownMenuItem>
+            <DropdownMenuItem className="text-gray-600">
               <Image
                 src="/images/icon-todo.svg"
                 alt="todo list"
@@ -45,7 +49,7 @@ const NavItems = () => {
               />
               Todo List
             </DropdownMenuItem>
-            <DropdownMenuItem>
+            <DropdownMenuItem className="text-gray-600">
               <Image
                 src="/images/icon-calendar.svg"
                 alt="todo list"
@@ -55,7 +59,7 @@ const NavItems = () => {
               />
               Calendar
             </DropdownMenuItem>
-            <DropdownMenuItem>
+            <DropdownMenuItem className="text-gray-600">
               <Image
                 src="/images/icon-reminders.svg"
                 alt="todo list"
@@ -65,7 +69,7 @@ const NavItems = () => {
               />
               Reminders
             </DropdownMenuItem>
-            <DropdownMenuItem>
+            <DropdownMenuItem className="text-gray-600">
               <Image
                 src="/images/icon-planning.svg"
                 alt="todo list"
@@ -81,7 +85,11 @@ const NavItems = () => {
       <li className="hover:cursor-pointer">
         <DropdownMenu open={open2} onOpenChange={setOpen2}>
           <DropdownMenuTrigger
-            className="flex items-center outline-none"
+            className={
+              open2
+                ? "flex items-center text-gray-800 hover:text-gray-800 font-medium outline-none"
+                : "flex items-center text-gray-500 hover:text-gray-800 font-medium outline-none"
+            }
             onClick={() => setOpen2(true)}
           >
             Company
@@ -98,14 +106,22 @@ const NavItems = () => {
             />
           </DropdownMenuTrigger>
           <DropdownMenuContent className="border-none rounded-lg">
-            <DropdownMenuItem>History</DropdownMenuItem>
-            <DropdownMenuItem>Our Team</DropdownMenuItem>
-            <DropdownMenuItem>Blog</DropdownMenuItem>
+            <DropdownMenuItem className="text-gray-600">
+              History
+            </DropdownMenuItem>
+            <DropdownMenuItem className="text-gray-600">
+              Our Team
+            </DropdownMenuItem>
+            <DropdownMenuItem className="text-gray-600">Blog</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </li>
-      <li className="hover:cursor-pointer">Carrers</li>
-      <li className="hover:cursor-pointer">About</li>
+      <li className="hover:cursor-pointer text-gray-500 hover:text-gray-800 focus:text-gray-800 font-medium">
+        Carrers
+      </li>
+      <li className="hover:cursor-pointer text-gray-500 hover:text-gray-800 focus:text-gray-800 font-medium">
+        About
+      </li>
     </ul>
   );
 };
