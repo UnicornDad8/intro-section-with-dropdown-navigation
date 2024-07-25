@@ -1,9 +1,12 @@
-import { Button } from "@/components/ui/button";
+import Header from "@/components/shared/Header";
 
 export default function Home() {
   return (
-    <main>
-      <Button className="bg-black">Click me</Button>
-    </main>
+    <div className="flex h-screen flex-col">
+      <Header />
+      <main>
+        <p>contenido</p>
+      </main>
+    </div>
   );
 }
