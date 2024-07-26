@@ -1,4 +1,5 @@
-import React from "react";
+import Image from "next/image";
+import { Button } from "../ui/button";
 
 const Hero = () => {
   return (
@@ -14,6 +15,47 @@ const Hero = () => {
           Get your team in sync, no matter your location. Streamline processes,
           create team rituals, and watch productivity soar.
         </p>
+        <Button className="text-gray-100 h-[50px] rounded-lg px-6 bg-black hover:scale-90 transition-all duration-300">
+          Learn more
+        </Button>
+        <div className="w-full px-2 md:px-0 mt-[130px] grid grid-rows-1 grid-cols-4 gap-12">
+          <div className="flex flex-center">
+            <Image
+              src="/images/client-databiz.svg"
+              alt="databiz logo"
+              width={200}
+              height={100}
+              className="object-contain h-full w-full"
+            />
+          </div>
+          <div className="flex flex-center h-[38px]">
+            <Image
+              src="/images/client-audiophile.svg"
+              alt="audiophile logo"
+              width={200}
+              height={100}
+              className="object-contain h-full w-full"
+            />
+          </div>
+          <div className="flex flex-center h-[30px]">
+            <Image
+              src="/images/client-meet.svg"
+              alt="meet logo"
+              width={200}
+              height={100}
+              className="object-contain h-full w-full"
+            />
+          </div>
+          <div className="flex flex-center">
+            <Image
+              src="/images/client-maker.svg"
+              alt="maker logo"
+              width={200}
+              height={100}
+              className="object-contain h-full w-full"
+            />
+          </div>
+        </div>
       </div>
       <div className="bg-blue-300 md:w-1/2 w-full h-full flex -order-1 md:order-1">
         world
