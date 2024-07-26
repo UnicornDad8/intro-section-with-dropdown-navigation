@@ -1,7 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "../ui/button";
+import { useMediaQuery } from "react-responsive";
 
 const Hero = () => {
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 768px)",
+  });
+
   return (
     <section className="flex flex-center flex-col md:flex-row wrapper h-full">
       <div className="flex flex-col justify-center items-center md:items-start md:px-2 px-0 py-3 md:w-1/2 w-full h-full">
@@ -18,7 +25,7 @@ const Hero = () => {
         <Button className="text-gray-100 h-[50px] rounded-lg px-6 bg-black hover:scale-90 transition-all duration-300">
           Learn more
         </Button>
-        <div className="w-full px-2 md:px-0 mt-[130px] grid grid-rows-1 grid-cols-4 gap-12">
+        <div className="w-full px-2 md:px-0 mt-6 md:mt-[130px] grid grid-rows-1 grid-cols-4 gap-12">
           <div className="flex flex-center">
             <Image
               src="/images/client-databiz.svg"
@@ -57,8 +64,28 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="bg-blue-300 md:w-1/2 w-full h-full flex -order-1 md:order-1">
-        world
+      <div className="md:w-1/2 w-full h-full flex -order-1 md:order-1">
+        <div className="ml-0 md:ml-[60px] w-full h-full">
+          {isDesktop ? (
+            <Image
+              src="/images/image-hero-desktop.png"
+              alt="hero desktop"
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: "85%", height: "auto" }}
+            />
+          ) : (
+            <Image
+              src="/images/image-hero-mobile.png"
+              alt="Hero mobile"
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: "100%", height: "auto" }} // optional
+            />
+          )}
+        </div>
       </div>
     </section>
   );
