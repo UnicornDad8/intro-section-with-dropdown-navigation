@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="flex h-screen flex-col">
       <Header />
-      <main>
+      <main className="h-full">
         <Hero />
       </main>
     </div>
