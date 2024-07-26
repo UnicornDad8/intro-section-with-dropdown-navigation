@@ -101,7 +101,7 @@ const MobileNav = () => {
           <Button className="text-black w-full h-[36px] px-6 bg-transparent border-none outline-none">
             Login
           </Button>
-          <Button className="text-black w-full h-[36px] px-6 bg-transparent outline outline-offset-2 outline-2 outline-black hover:bg-transparent">
+          <Button className="text-black w-full h-[36px] px-6 bg-transparent outline outline-offset-2 outline-2 outline-black hover:bg-transparent hover:scale-90 transition-all duration-300">
             Register
           </Button>
         </SheetContent>

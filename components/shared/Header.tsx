@@ -23,7 +23,7 @@ const Header = () => {
                 Login
               </li>
               <li className="cursor-pointer">
-                <Button className="text-gray-800 h-[36px] px-6 bg-transparent outline outline-offset-2 outline-2 outline-gray-800 hover:bg-transparent">
+                <Button className="text-gray-800 h-[36px] px-6 bg-transparent outline outline-offset-2 outline-2 outline-gray-800 hover:bg-transparent hover:scale-90 transition-all duration-300">
                   Register
                 </Button>
               </li>
