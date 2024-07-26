@@ -73,7 +73,7 @@ const Hero = () => {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: "85%", height: "auto" }}
+              style={{ width: "84%", height: "auto" }}
             />
           ) : (
             <Image
@@ -82,7 +82,7 @@ const Hero = () => {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: "100%", height: "auto" }} // optional
+              style={{ width: "100%", height: "auto" }}
             />
           )}
         </div>
