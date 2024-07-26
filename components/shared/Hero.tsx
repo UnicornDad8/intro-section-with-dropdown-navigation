@@ -13,8 +13,8 @@ const Hero = () => {
     <section className="flex flex-center flex-col md:flex-row wrapper h-full">
       <div className="flex flex-col justify-center items-center md:items-start md:px-2 px-0 py-3 md:w-1/2 w-full h-full">
         <div className="flex flex-row md:flex-col">
-          <h1 className="text-[42px] md:text-7xl font-bold">Make</h1>
-          <h1 className="text-[42px] md:text-7xl md:ml-0 ml-3 font-bold">
+          <h1 className="text-[40px] md:text-7xl font-bold">Make</h1>
+          <h1 className="text-[40px] md:text-7xl md:ml-0 ml-3 font-bold">
             remote work
           </h1>
         </div>
@@ -65,17 +65,17 @@ const Hero = () => {
         </div>
       </div>
       <div className="md:w-1/2 w-full h-full flex -order-1 md:order-1">
-        <div className="ml-0 md:ml-[60px] w-full h-full">
-          {isDesktop ? (
+        <div className="flex justify-end w-full h-full">
+          {isDesktop && (
             <Image
               src="/images/image-hero-desktop.png"
               alt="hero desktop"
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: "84%", height: "auto" }}
+              width={480}
+              height={640}
+              className="mb-24"
             />
-          ) : (
+          )}
+          {!isDesktop && (
             <Image
               src="/images/image-hero-mobile.png"
               alt="Hero mobile"
