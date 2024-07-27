@@ -11,7 +11,7 @@ const Hero = () => {
 
   return (
     <section className="flex flex-center flex-col md:flex-row wrapper h-full">
-      <div className="flex flex-col justify-center items-center md:items-start md:px-2 px-0 py-3 md:w-1/2 w-full h-full">
+      <div className="flex flex-col justify-center items-center md:items-start md:px-2 md:pr-10 px-0 py-3 md:w-1/2 w-full h-full">
         <div className="flex flex-row md:flex-col">
           <h1 className="text-[40px] md:text-7xl font-bold">Make</h1>
           <h1 className="text-[40px] md:text-7xl md:ml-0 ml-3 font-bold">
@@ -64,18 +64,16 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="md:w-1/2 w-full h-full flex -order-1 md:order-1">
-        <div className="flex justify-end w-full h-full">
-          {isDesktop && (
+      <div className="md:w-1/2 w-full flex justify-end h-full -order-1 md:order-1">
+        <div className="w-full h-full md:ml-24">
+          {isDesktop ? (
             <Image
               src="/images/image-hero-desktop.png"
               alt="hero desktop"
-              width={480}
-              height={640}
-              className="mb-24"
+              width={440}
+              height={600}
             />
-          )}
-          {!isDesktop && (
+          ) : (
             <Image
               src="/images/image-hero-mobile.png"
               alt="Hero mobile"
