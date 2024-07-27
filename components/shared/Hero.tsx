@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { useMediaQuery } from "react-responsive";
+import dynamic from "next/dynamic";
+
+const MediaQuery = dynamic(() => import("react-responsive"), {
+  ssr: false,
+});
 
 const Hero = () => {
-  const isDesktop = useMediaQuery({
-    query: "(min-width: 769px)",
-  });
-
   return (
     <section className="flex flex-center flex-col md:flex-row wrapper h-full">
       <div className="flex flex-col justify-center items-center md:items-start md:px-2 md:pr-10 px-0 py-3 md:w-1/2 w-full h-full">
@@ -66,23 +66,27 @@ const Hero = () => {
       </div>
       <div className="md:w-1/2 w-full flex justify-end h-full -order-1 md:order-1">
         <div className="w-full h-full md:ml-24">
-          {isDesktop ? (
-            <Image
-              src="/images/image-hero-desktop.png"
-              alt="hero desktop"
-              width={440}
-              height={600}
-            />
-          ) : (
-            <Image
-              src="/images/image-hero-mobile.png"
-              alt="Hero mobile"
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: "100%", height: "auto" }}
-            />
-          )}
+          <MediaQuery minWidth={769}>
+            {(matches) =>
+              matches ? (
+                <Image
+                  src="/images/image-hero-desktop.png"
+                  alt="hero desktop"
+                  width={440}
+                  height={600}
+                />
+              ) : (
+                <Image
+                  src="/images/image-hero-mobile.png"
+                  alt="Hero mobile"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              )
+            }
+          </MediaQuery>
         </div>
       </div>
     </section>
