@@ -6,7 +6,7 @@ import { useMediaQuery } from "react-responsive";
 
 const Hero = () => {
   const isDesktop = useMediaQuery({
-    query: "(min-width: 768px)",
+    query: "(min-width: 769px)",
   });
 
   return (
